@@ -1,5 +1,5 @@
 # AI Agent Patterns - Consolidated Extract
-# Generated from 58 repos on 2026-08-10
+# Generated from 91 repos on 2026-08-10
 
 ---
 
@@ -82,6 +82,46 @@
 ## 20. MEM0 (Memory Layer)
 **Source:** mem0ai/mem0
 **Pattern:** Persistent memory layer for agents with embedding-based retrieval. Cross-session context preservation.
+
+## 21. CHATDEV (Workflow Graph)
+**Source:** OpenBMB/ChatDev
+**Pattern:** Graph-based workflow orchestration with DAG and cycle execution strategies. Memory + thinking management integrated into graph nodes. Human-in-the-loop prompt channels.
+
+## 22. CAMEL (Role-Based Agents)
+**Source:** camel-ai/camel
+**Pattern:** Role-playing multi-agent framework with systematic "inception" prompting. Agent messages with role switching, memory factory, and thinking manager base classes.
+
+## 23. AUTOGEN (ConversableAgent)
+**Source:** microsoft/autogen
+**Pattern:** ConversableAgent base class with human/agent message routing. Code block extraction from messages. Nested conversation support.
+
+## 24. LLAMAINDEX (RAG Pipeline)
+**Source:** run-llama/llama_index
+**Pattern:** Index → Retriever → Query Engine pipeline for document ingestion. Vector stores + LLM rerankers for RAG.
+
+## 25. FASTGPT (Knowledge QA)
+**Source:** labring/FastGPT
+**Pattern:** Knowledge base QA with vector search + workflow orchestration. API-first design for embedding-based question answering.
+
+## 26. TRANSFORMERS (Hugging Face)
+**Source:** huggingface/transformers
+**Pattern:** Model hub pattern for downloading/tracking model versions. Pipeline abstraction for inference tasks.
+
+## 27. CONTINVE (IDE Agent)
+**Source:** continuedev/continue
+**Pattern:** IDE-integrated agent with codebase context. Autocomplete + chat + edit loop.
+
+## 28. PYDANTIC-AI (Structured Output)
+**Source:** pydantic/pydantic-ai
+**Pattern:** Type-safe agent output via Pydantic models. Run context with dependency injection.
+
+## 29. DSPY (Programming vs Prompting)
+**Source:** stanfordnlp/dspy
+**Pattern:** Programming, not prompting. Optimizer-driven prompt and module selection with assertion-driven training.
+
+## 30. OPENAI-QUICKSTART
+**Source:** openai/openai-quickstart-python
+**Pattern:** Minimal API integration pattern for OpenAI Assistants/Threads/Runs. File search + code interpreter quickstart.
 
 ---
 
