@@ -2,18 +2,21 @@
 Curated collection of top AI agent repositories with extracted patterns.
 
 ## Stats
-- Total repos: 58 clean repos
-- Disk usage: ~du -sh repos/~
-- Last updated: 2026-08-10
+- Local repos: 91 clean clones under repos/ (local cache, not pushed to GitHub)
+- Disk usage: du -sh repos/
+- Patterns: extracted in EXTRACTED_PATTERNS.md (AutoGPT, CrewAI, Roo-Code, AG2, ChatDev, camel, autogen, langchain, etc.)
 
-## Categories
-Core platforms: openclaw, hermes-agent, browser-use, screenpipe, opencode, aider, claude-mem
-Multi-agent: MetaGPT, crewAI, deepagents, Roo-Code, openai-agents-python, qwen-code, AutoGPT, AGiXT, SuperAGI, agno, Mastra, pi
-Coding agents: OpenHands, kilocode, page-agent, serena, Cursor, Cline, codex, CherryStudio
-Planning: planning-with-files, autoresearch, DeepSeek-Reasonix, gpt-researcher, OpenViking, ponytail, system-prompts
-RAG/chat: Dify, Langflow, RAGFlow, khoj, Flowise, LibreChat, langchain
-Research: awesome-llm-apps, Agent-Reach, AgentZero, agency-agents, nanobot, oh-my-openagent, ruflo, BabyAGI
-Local/offline: OpenCLI, agenticSeek, crush, Mem0, ag2
+## Structure
+- repos/ - local cache of 91 top AI agent repos (~3.5G+)
+- EXTRACTED_PATTERNS.md - consolidated production-grade patterns
+- READY_REPO.md - first-pass analyzed repo (OpenClaw)
+- extract_patterns.py - pattern extraction script
 
 ## Usage
-Read EXTRACTED_PATTERNS.md for consolidated production-grade patterns from these repos.
+1. Local repos are available for pattern extraction
+2. EXTRACTED_PATTERNS.md contains consolidated patterns
+3. Use github-knowledge-extractor skill for new repos
+4. Use ai-agent-knowledge-ingestion skill to adopt patterns
+
+## Repos Included
+Top repos: openclaw, browser-use, MetaGPT, screenpipe, AutoGPT, CrewAI, Roo-Code, aider, babyagi, agixt, superagi, gpt-engineer, OpenDevin, ag2, langchain, claude-code, ChatDev, camel, autogen, llama_index, FastGPT, transformers, continue, pydantic-ai, dspy, openai-agents-python, and more.
