@@ -2,7 +2,7 @@
 Curated collection of top AI agent repositories with extracted patterns.
 
 ## Stats
-- Local repos: 91 clean clones under repos/ (local cache, not pushed to GitHub)
+- Local repos: 100 clean clones under repos/ (local cache, not pushed to GitHub)
 - Disk usage: du -sh repos/
 - Patterns: extracted in EXTRACTED_PATTERNS.md (AutoGPT, CrewAI, Roo-Code, AG2, ChatDev, camel, autogen, langchain, etc.)
 
