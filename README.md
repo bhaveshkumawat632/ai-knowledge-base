@@ -1,63 +1,45 @@
 # AI Agent Knowledge Base
-Curated collection of 36 top AI agent repositories with extracted patterns.
+Curated collection of top AI agent repositories with extracted patterns.
 
-## Repos
+## Stats
+- Total repos: 61
+- Disk usage: ~4.2GB
+- Extracted patterns: 180+ unique patterns
+
+## Categories
 
 ### Core Platforms
-- `openclaw` - Personal AI assistant gateway + multi-channel
-- `hermes-agent` - NousResearch Hermes Agent
-- `browser-use` - AI browser automation
-- `screenpipe` - Local screen/audio capture for agent memory
+openclaw, hermes-agent, browser-use, screenpipe, opencode, aider, claude-mem
 
 ### Multi-Agent Frameworks
-- `MetaGPT` - SOP-based software company simulation
-- `crewAI` - Role-based agent collaboration
-- `deepagents` - LangChain deep agent patterns
-- `Roo-Code` - Code execution agent
-- `openai-agents-python` - OpenAI Agents SDK
-- `qwen-code` - Qwen code agent
+MetaGPT, crewAI, deepagents, Roo-Code, openai-agents-python, qwen-code, AutoGPT, AGiXT, SuperAGI, agno, Mastra, pi
 
-### Reasoning & Planning
-- `planning-with-files` - Persistent task_plan.md pattern
-- `autoresearch` - Karpathy self-improving research loop
-- `DeepSeek-Reasonix` - Chain-of-thought reasoning
-- `gpt-researcher` - Deep research agent
-- `OpenViking` - Open source research
+### Planning/Reasoning
+planning-with-files, autoresearch, DeepSeek-Reasonix, gpt-researcher, OpenViking, ponytail, system-prompts
 
 ### Coding Agents
-- `OpenHands` - All-Hands autonomous SWE
-- `aider` - Code editing with LLMs
-- `kilocode` - Kilo code agent
-- `page-agent` - Alibaba page agent
-- `serena` - Serena coding agent
+OpenHands, kilocode, page-agent, serena, Cursor, Cline
 
 ### Local/Offline
-- `ollama-based` - Local LLM integration
-- `OpenCLI` - Open CLI agent
-- `agenticSeek` - Local agentic search
-- `crush` - Charmbracelet CLI agent
+OpenCLI, agenticSeek, crush, Mem0
 
-### Skills & Tools
-- `google-skills` - Google skills library
-- `Flowise` - Visual agent builder
-- `LibreChat` - Chat platform
-- `AgentGPT` - Web-based autonomous agents
-- `gpt-researcher` - Research automation
+### RAG/Knowledge
+Dify, Langflow, RAGFlow, khoj, n8n, Flowise, LibreChat
 
-### Research & Analysis
-- `awesome-llm-apps` - LLM app collection
-- `Agent-Reach` - Agent benchmarking
-- `AgentZero` - Zero-agent framework
-- `agno` - AGI framework
-- `agency-agents` - Agency patterns
-- `nanobot` - HKU nano bot
-- `khoj` - Local-first knowledge
-- `oh-my-openagent` - Open agent collection
-- `ruflo` - Ruvnet flow
+### Browser/Desktop
+browser-use, Vercel-Agent-Browser
 
-## Extracted Patterns
-See `EXTRACTED_PATTERNS.md` for consolidated learnings.
+### Research/Analysis
+awesome-llm-apps, Agent-Reach, AgentZero, agency-agents, nanobot, oh-my-openagent, ruflo, BabyAGI
 
-## Workspace
-- Local: `~/ai-knowledge-base/`
-- Remote: `github.com/bhaveshkumawat632/ai-knowledge-base`
+## Key Extracted Patterns
+1. ReAct loop + AgentTool wrapper
+2. StateGraph task state management
+3. Persistent task queue with retry
+4. Skill loader/registry
+5. Self-evaluation + scoring
+6. OpenClaw gateway + channel abstraction
+7. Browser-use cloud task pattern
+8. planning-with-files loop template
+9. MetaGPT SOP-based role decomposition
+10. Screenpipe local memory/context layer
