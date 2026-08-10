@@ -3,101 +3,199 @@
 
 ---
 
-## 1. OPENCLAW (Gateway/Channel Architecture)
+## 1. OPENCLAW (Gateway + Channel Architecture)
 **Source:** openclaw/openclaw
-**Pattern:** Multi-channel gateway with unified message bus
-**Adoption:** Backend can use similar channel abstraction for multi-model routing
+**Pattern:** Personal AI assistant gateway connecting models, tools, messaging channels
+**Key Concepts:**
+- Gateway = local control plane for sessions, tools, events, channels
+- Channels: WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage
+- Self-extending skills: agent writes its own capabilities
+- Multi-interface: Control UI + TUI + CLI
+- Plugin/Skill marketplace via ClawHub
+**Adoption:** Backend channel abstraction, multi-platform messaging, skill marketplace
 
 ## 2. BROWSER-USE (Browser Automation)
 **Source:** browser-use/browser-use
-**Pattern:** DOM-aware browser agent with accessibility tree parsing
+**Pattern:** Make websites accessible for AI agents
+**Key Concepts:**
+- DOM-aware browser agent with accessibility tree parsing
+- Handles dynamic elements, modals, login flows, JavaScript-heavy interfaces
+- Vision-first automation with screenshot understanding
+- Form filling, data retrieval, web scraping
 **Adoption:** Add browser tool to backend for web automation tasks
 
 ## 3. METAGPT (SOP-Based Multi-Agent)
 **Source:** FoundationAgents/MetaGPT
-**Pattern:** Role-based agents with SOPs (product manager, architect, engineer)
-**Code:** `from metagpt.software_company import generate_repo`
+**Pattern:** Role-based agents with Standard Operating Procedures
+**Key Concepts:**
+- Software company simulation: product manager, architect, project manager, engineer
+- "Code = SOP(Team)" - materialize SOPs and apply to LLM teams
+- Structured outputs: user stories, competitive analysis, requirements, data structures, APIs
+- Role-based message passing
 **Adoption:** Implement role-based task decomposition in orchestrator
 
 ## 4. PLANNING-WITH-FILES (Persistent Planning)
 **Source:** OthmanAdi/planning-with-files
-**Pattern:** Persistent `task_plan.md` across sessions
-**Skills:** 6 languages (en, ar, de, es, zh, zht)
-**Adoption:** Add planning skill to backend
+**Pattern:** File-based working memory that survives context resets
+**Key Concepts:**
+- 3-file pattern: `task_plan.md`, `findings.md`, `progress.md`
+- Context Window = RAM (volatile), Filesystem = Disk (persistent)
+- Hooks re-inject plan each turn
+- Survives /clear, crashes, compaction
+- Session recovery: reads previous session store
+- Benchmark: 96.7% pass rate, resumes in 5.0 turns vs 13.3 raw
+**Adoption:** Add planning skill to backend, persistent task state
 
 ## 5. SCREENPIPE (Local Capture + Indexing)
 **Source:** screenpipe/screenpipe
 **Pattern:** 24/7 local screen/audio capture, searchable memory
-**Adoption:** Add local memory capture to agent platform
+**Key Concepts:**
+- AGENTS.md loaded into every agent's context
+- On-demand documentation pointers
+- Multi-agent collaboration rules
+- Parallel execution with safety boundaries
+**Adoption:** Local memory capture, agent collaboration protocols
 
-## 6. OPENAI-AGENTS-PYTHON (Agents SDK)
+## 6. AGNO (Agent Platform Runtime)
+**Source:** agno-agi/agno
+**Pattern:** Production agent platform with full runtime
+**Key Concepts:**
+- 50+ REST endpoints with SSE and WebSockets
+- JWT-based RBAC and multi-tenant isolation
+- Context providers for live data
+- Human approval gates
+- Scheduling/cron background jobs
+- Both sync and async variants required
+- Cookbook pattern for examples
+**Adoption:** Production-grade API patterns, security, observability
+
+## 7. OPENAI-AGENTS-PYTHON (Agents SDK)
 **Source:** openai/openai-agents-python
-**Pattern:** Official Python agents SDK with handoffs/tools
-**Adoption:** Reference for AgentTool pattern implementation
+**Pattern:** Official lightweight multi-agent framework
+**Key Concepts:**
+- Agent handoffs between specialized agents
+- Tool definitions with structured outputs
+- Guardrails and human-in-the-loop
+**Adoption:** AgentTool wrapper pattern in backend
 
-## 7. KILOCODE (Code Agent)
+## 8. KILOCODE (Code Agent)
 **Source:** Kilo-Org/kilocode
-**Pattern:** Fast code generation + execution
+**Pattern:** All-in-one agentic engineering platform
+**Key Concepts:**
+- Fast code generation + execution
+- Multi-model support
+- Ship and iterate quickly
 **Adoption:** Add to model registry
 
-## 8. SERENA (Coding Agent)
+## 9. SERENA (Semantic Code Editing)
 **Source:** oraios/serena
-**Pattern:** Semantic code understanding + editing
+**Pattern:** MCP toolkit for semantic code retrieval and editing
+**Key Concepts:**
+- Symbol-level code understanding
+- IDE-like editing capabilities for agents
+- MCP-based tool design
 **Adoption:** Enhance code task handling
 
-## 9. PRIMEINTELLECT-PRIME-AGENT (Training + Inference)
+## 10. PRIMEINTELLECT-PRIME-AGENT (Self-Improving)
 **Source:** PrimeIntellect-ai/prime-agent
-**Pattern:** Unified training and inference agent
+**Pattern:** Self-improving reasoning language model agent
+**Key Concepts:**
+- Training + inference unified
+- Recursive self-improvement
+- Reflection and evaluation loops
 **Adoption:** Self-improvement loop reference
 
-## 10. FLOWISE (Visual Agent Builder)
+## 11. FLOWISE (Visual Agent Builder)
 **Source:** FlowiseAI/Flowise
-**Pattern:** Drag-drop agent flow builder
+**Pattern:** Drag-drop visual AI agent builder
+**Key Concepts:**
+- No-code agent construction
+- Flow-based agent design
 **Adoption:** Frontend flow designer
 
-## 11. LIBRECHAT (Chat Platform)
+## 12. LIBRECHAT (Chat Platform)
 **Source:** danny-avila/LibreChat
 **Pattern:** Multi-provider chat interface
+**Key Concepts:**
+- Multi-model switching
+- MCP support
+- Code interpreter
+- Message search
+- Multi-user auth
 **Adoption:** UI patterns for chat
 
-## 12. PAGE-AGENT (Web Page Agent)
+## 13. PAGE-AGENT (Web Page Agent)
 **Source:** alibaba/page-agent
-**Pattern:** Page-level understanding and interaction
+**Pattern:** JavaScript in-page GUI agent
+**Key Concepts:**
+- Control web interfaces with natural language
+- In-page execution
 **Adoption:** Web automation
 
-## 13. AGNO (AGI Framework)
+## 14. AGNO (AGI Framework)
 **Source:** agno-agi/agno
-**Pattern:** Modular AGI components
+**Pattern:** Modular AGI platform components
+**Key Concepts:**
+- Agent teams and workflows
+- Knowledge/RAG integration
+- Vector database support
+- Observability with OpenTelemetry
 **Adoption:** Architecture reference
 
-## 14. GOOGLE-SKILLS (Skills Library)
+## 15. GOOGLE-SKILLS (Skills Library)
 **Source:** google/skills
 **Pattern:** Official Google skills collection
+**Key Concepts:**
+- Standardized skill format
+- Cross-platform compatibility
 **Adoption:** Expand skills loader
 
-## 15. ROO-CODE (Code Execution)
+## 16. ROO-CODE (Sandboxed Execution)
 **Source:** RooCodeInc/Roo-Code
 **Pattern:** Safe code execution in sandbox
+**Key Concepts:**
+- Permission-gated steps
+- Sandboxed execution environment
+- Error recovery
 **Adoption:** Sandboxed execution in backend
+
+## 17. AGENT MEMORY / CLAUDE-MEM (Persistent Context)
+**Source:** thedotmack/claude-mem
+**Pattern:** Persistent context across sessions
+**Key Concepts:**
+- Captures agent actions during sessions
+- Compresses with AI
+- Injects relevant context into future sessions
+- Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot
+**Adoption:** Cross-session memory persistence
+
+## 18. SYSTEM PROMPTS & MODELS (Prompt Library)
+**Source:** x1xhlol/system-prompts-and-models-of-ai-tools
+**Pattern:** Collection of production system prompts
+**Key Concepts:**
+- Augment Code, Claude Code, Cursor, Devin, Kiro, Replit prompts
+- Internal tools and AI models documentation
+- Prompt engineering best practices
+**Adoption:** Improve prompt engineering in backend
 
 ---
 
-## EXISTING PATTERNS (from 17 earlier repos)
+## EXISTING PATTERNS (from earlier repos)
 1. ReAct loop reasoning
-2. Test-driven verification
-3. Self-healing retry logic
-4. Parallel execution strategy
-5. Memory validation/guard
-6. MCP tool definitions
-7. Screenshot-based browser verification
-8. Role-based task decomposition
-9. Self-evaluation/score step
-10. Memory with retrieval
+2. StateGraph task state
+3. AgentTool wrapper
+4. Persistent task queue
+5. Skill loader/registry
+6. Self-evaluation + scoring
+7. Retry with backoff
+8. Parallel orchestration
+9. Browser/screen capture
+10. SOP-based role decomposition
 
 ---
 
 ## READY-TO-ADOPT IMPROVEMENTS
-1. Multi-channel gateway (openclaw)
+1. Multi-channel gateway (OpenClaw)
 2. Browser automation (browser-use)
 3. SOP-based roles (MetaGPT)
 4. Persistent planning files (planning-with-files)
@@ -107,3 +205,6 @@
 8. Visual flow builder (Flowise)
 9. Semantic code editing (serena)
 10. Expanded skills library (google-skills)
+11. Production API patterns (Agno)
+12. Persistent context across sessions (claude-mem)
+13. Prompt library integration (system-prompts-and-models)
