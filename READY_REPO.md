@@ -1,48 +1,34 @@
 # Ready Repo Reference
-First fully analyzed and pattern-extracted repo for immediate adoption.
+First fully analyzed repo ready for immediate backend adoption.
 
 ## Selected: openclaw
-**Why:** Gateway + channel architecture is the highest-impact pattern for backend.
-
-### Core Pattern
-Personal AI assistant gateway connecting models, tools, messaging channels.
+**Why:** Gateway + channel abstraction + hook dispatch is highest-impact for backend.
 
 ### Architecture
 ```
 OpenClaw
-├── Gateway (control plane)
-│   ├── Session management
-│   ├── Tool registry
-│   ├── Event bus
-│   └── Channel adapters
+├── Gateway
+│   ├── Hook dispatch (/hooks)
+│   ├── Session lifecycle
+│   └── Agent routing
 ├── Channels
-│   ├── WhatsApp
-│   ├── Telegram
-│   ├── Slack
-│   ├── Discord
-│   ├── Google Chat
-│   ├── Signal
-│   └── iMessage
-└── Skills/Plugins
-    ├── Self-extending capabilities
+│   ├── Telegram, WhatsApp, Discord, Slack
+│   ├── Signal, iMessage, Google Chat
+│   └── HTTP/Webhook
+└── Tools/Plugins
+    ├── Plugin SDK
     └── ClawHub marketplace
 ```
 
 ### Key Code Patterns
-1. Channel abstraction layer
-2. Tool registration/discovery
-3. Session state management
-4. Event-driven architecture
-5. Plugin marketplace
+1. Hook dispatch with token auth
+2. Channel abstraction layer
+3. Session lifecycle state machine
+4. Agent allowlist policy
+5. Idempotency/header normalization
+6. Delivery routing
 
-### Adoption Status
-- [ ] Backend channel abstraction
-- [ ] Multi-platform messaging
-- [ ] Skill marketplace
-- [ ] Gateway control plane
-
-## Next Ready Repos
-1. browser-use - Browser automation
-2. MetaGPT - SOP-based multi-agent
-3. planning-with-files - Persistent planning
-4. screenpipe - Local memory capture
+### Adoption Target
+- Backend gateway route `/hooks`
+- Channel registry
+- Agent/session policy
